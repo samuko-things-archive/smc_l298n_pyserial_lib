@@ -4,8 +4,12 @@ import time
 
 smc = SMC('/dev/ttyUSB0')
 
-
-time.sleep(5)
+#wait for smc to fully setup
+for i in range(5):
+  time.sleep(1.0)
+  print(f'configuring controller: {i} sec')
+smc.sendTargetVel(0.0, 0.0)
+print('configuration complete')
 
 angPosA=0.0
 angPosB=0.0

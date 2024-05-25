@@ -47,26 +47,26 @@ class SMC:
 
 
   def sendTargetVel(self, targetVelA=0.0, targetVelB=0.0):
-    isSuccess = self.send("tag", targetVelA, targetVelB) # sends  targetA, targetB
+    isSuccess = self.send("/tag", targetVelA, targetVelB) # sends  targetA, targetB
     return isSuccess
   
   def sendPwm(self, pwmValA=0, pwmValB=0):
-    isSuccess = self.send("pwm", pwmValA, pwmValB) # sends  pwmValA, pwmValB
+    isSuccess = self.send("/pwm", pwmValA, pwmValB) # sends  pwmValA, pwmValB
     return isSuccess
   
   def getMotorsVel(self):
-    angVelA, angVelB = self.get("vel")
+    angVelA, angVelB = self.get("/vel")
     return angVelA, angVelB
   
   def getMotorsPos(self):
-    angPosA, angPosB = self.get("pos")
+    angPosA, angPosB = self.get("/pos")
     return angPosA, angPosB
   
   def getMotorAData(self):
-    angPos, angVel = self.get("dataA")
+    angPos, angVel = self.get("/dataA")
     return angPos, angVel
   
   def getMotorBData(self):
-    angPos, angVel = self.get("dataB")
+    angPos, angVel = self.get("/dataB")
     return angPos, angVel
   

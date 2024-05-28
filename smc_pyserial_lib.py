@@ -24,7 +24,7 @@ class SMC:
 
 
   def send(self, cmd_route, valA=0, valB=0):
-    if cmd_route == "mode":
+    if cmd_route == "/mode":
       return False
     
     cmd_str = cmd_route+","+str(valA)+","+str(valB)

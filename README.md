@@ -1,5 +1,5 @@
 
-# smc_pyserial_lib
+# smc_l298n_pyserial_lib
 This is a child project of the Samuko Motor Control (SMC) project. This library can be used in your python robotic project to communicate with the **`smc_l298n_pid_driver module`** in order to send target angular velocities to the motors or receive the motor's angular velocity and angular position, after successful velocity PID setup with the [**`smc_l298n_setup_application`**](https://github.com/samuko-things-company/smc_l298n_setup_application).
 
 > you can use it in your microcomputer robotics project (e.g Raspberry Pi, PC, etc.)
